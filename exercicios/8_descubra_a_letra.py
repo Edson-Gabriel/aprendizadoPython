@@ -2,13 +2,13 @@ nome = input('Digite uma palavra, ou uma frase: ')
 letra = input('Qual letra você quer descobrir: ')
 indice = 0
 while indice < len(nome):
-    if nome[indice] == letra or nome[indice] == letra.upper():
+    if nome[indice] == letra.lower() or nome[indice] == letra.upper():
         if nome[indice] == letra:
-            print('B de Baleia no indice', indice + 1, 'b minúsculo')
+            print(f'{letra} no indice', indice + 1, f'{letra} minúsculo')
         else:
-            print('B de Baleia no indice', indice + 1, 'B maiúsculo')
+            print(f'{letra.upper()} no indice', indice + 1, f'{letra.upper()} maiúsculo')
     indice += 1
-print('Acabou as letras b')
+print(f'Acabou as letras {letra} na palavra {nome}')
 
 
 

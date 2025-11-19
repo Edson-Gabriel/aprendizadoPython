@@ -32,7 +32,7 @@ while True:
         print(num1_float - num2_float)
         # print(f'{num1_float}' - f'{num2_float}')
     elif operador == '*':
-            print(num1_float + num2_float)
+            print(num1_float * num2_float)
         # print(f'{num1_float}' * f'{num2_float}')
     elif operador == '/':
         print(num1_float / num2_float)

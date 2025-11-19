@@ -6,10 +6,10 @@ Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 #FOI FEITO COM O PROFESSOR A VALIDAÇÃO DOS DADOS
 hora = input('São que horas? ')
 try:
-    hora_int = float(hora)
-    dia = hora_int<=11 or hora_int == 24
-    tarde = hora_int <= 17
-    noite = hora_int <= 23
+    hora_float = float(hora)
+    dia = hora_float<=11 or hora_float == 24
+    tarde = hora_float <= 17
+    noite = hora_float <= 23
 
     if dia:
         print('Bom dia')
@@ -26,10 +26,10 @@ except:
 #SOLUÇÃO ENCONTRADA SOZINHO
 # hora = input('São que horas? ')
 # if hora.isdigit():
-#     hora_int = float(hora)
-#     dia = hora_int<=11 or hora_int == 24
-#     tarde = hora_int <= 17
-#     noite = hora_int <= 23
+#     hora_float = float(hora)
+#     dia = hora_float<=11 or hora_float == 24
+#     tarde = hora_float <= 17
+#     noite = hora_float <= 23
 
 #     if dia:
 #         print('Bom dia')
