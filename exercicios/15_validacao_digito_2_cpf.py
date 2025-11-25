@@ -51,8 +51,17 @@ O segundo dígito do CPF é 0
 """
 
 
-cpf = '74682489070'
-nove_digitos = cpf[:9]
+cpf_enviado = input('Informe o seu CPF (sem pontos e traços): ')
+
+if not cpf_enviado.isdigit() or len(cpf_enviado) != 11:
+    print('CPF incorreto')
+    exit()
+
+if cpf_enviado == cpf_enviado[0] * 11:
+    print('CPF incorreto')
+    exit()
+
+nove_digitos = cpf_enviado[:9]
 contador_regressivo_1 = 10
 
 resultado_digito_1 = 0
@@ -71,6 +80,13 @@ resultado_digito_2 = 0
 for digito_2 in dez_digitos:
     resultado_digito_2 += int(digito_2) * contador_regressivo_2
     contador_regressivo_2 -= 1
-digito_2 = (resultado_digito_2*11) %11
+digito_2 = (resultado_digito_2*10) %11
 digito_2 = digito_2 if digito_2 <= 9 else 0
 print(digito_2)
+
+cpf_gerado = f'{nove_digitos}{digito_1}{digito_2}'
+
+if cpf_enviado == cpf_gerado:
+    print(f'{cpf_enviado} é válido')
+else:
+    print('CPF incorreto')
